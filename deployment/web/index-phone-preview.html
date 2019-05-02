@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Mendix - Phone preview</title>
+        <link href="css/phone-preview.css?636923988021013458" rel="stylesheet">
+    </head>
+    <body>
+        <div class="content">
+            <div class="wrapper">
+                <iframe id="frame" class="frame"></iframe>
+            </div>
+            <div class="disclaimer">
+                This is not an iPhone simulator but just a resized view surrounded with an iPhone image to give an impression of what the app might look like on a phone.
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var iframe = document.getElementById("frame");
+
+            iframe.onload = function() {
+                var iframeBody = iframe.contentWindow.document.body;
+                var fixClassFn = function() {
+                    if (iframeBody.className.indexOf("profile-desktop") !== -1) {
+                        iframeBody.className = iframeBody.className.replace("profile-desktop", "profile-phone");
+                    }
+                };
+
+                fixClassFn(); // Firefox
+
+                if (window.MutationObserver) {
+                    new MutationObserver(fixClassFn).observe(iframeBody, { attributes: true, attributeFilter: [ "class" ] });
+                } else {
+                    iframeBody.onpropertychange = fixClassFn; // IE9
+                }
+            };
+
+            // Firefox does not add a history item if the page is not loaded
+            // from the cache, and the src is set as attribute on the iframe
+            iframe.src = "index.html" + window.location.search + window.location.hash;
+        </script>
+    </body>
+</html>

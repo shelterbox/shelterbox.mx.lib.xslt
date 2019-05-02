@@ -1,0 +1,14 @@
+[rtlauncher:container$] INFO Container start took 4496. Ready to accept admin requests.
+Static error in {//blac:Filter/bb:Values} at char 13 in pattern in xsl:template/@match on line 7 column 66 
+  XPST0081: Namespace prefix 'blac' has not been declared
+Static error in {@xsi:type} at char 9 in expression in xsl:value-of/@select on line 10 column 51 
+  XPST0081: Namespace prefix 'xsi' has not been declared
+Error on line 9 column 30 
+  SXXP0003: Error reported by XML parser: The prefix "bb" for element "bb:ValueBoolean" is not bound.
+Static error in {//blac:Filter/bb:Values} at char 13 in pattern in xsl:template/@match on line 7 column 66 
+  XPST0081: Namespace prefix 'blac' has not been declared
+Static error in {//blac:Filter/bb:Values/bb:fv} at char 23 in pattern in xsl:template/@match on line 10 column 66 
+  XPST0081: Namespace prefix 'bb' has not been declared
+
+
+XP

@@ -1,0 +1,10 @@
+Buildfile: C:\Mendix\Apps\xslt\deployment\build_core.xml
+
+deploy:
+    [unzip] Expanding: C:\Program Files\Mendix\7.3.0\modeler\deployment.mxz into C:\Mendix\Apps\xslt\deployment
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
+
+
+
