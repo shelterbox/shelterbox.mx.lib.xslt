@@ -13,6 +13,7 @@ public class UserActionsRegistrar
   {
     registrator.bundleComponentLoaded();
     registrator.registerUserAction(system.actions.VerifyPassword.class);
+    registrator.registerUserAction(xslt.actions.XPath_Exists.class);
     registrator.registerUserAction(xslt.actions.XSLT.class);
   }
 }

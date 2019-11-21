@@ -10,16 +10,44 @@ import com.mendix.core.Core;
 import com.mendix.core.CoreException;
 import com.mendix.systemwideinterfaces.MendixRuntimeException;
 import com.mendix.systemwideinterfaces.core.IContext;
+import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public class Microflows
 {
 	// These are the microflows for the XSLT_Tester module
-	public static void xSLT_Tester_New(IContext context)
+	public static xslt_tester.proxies.XPath_Tester dS_XPath_Tester_New(IContext context)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			Core.execute(context, "XSLT_Tester.XSLT_Tester_New", params);
+			IMendixObject result = (IMendixObject)Core.execute(context, "XSLT_Tester.DS_XPath_Tester_New", params);
+			return result == null ? null : xslt_tester.proxies.XPath_Tester.initialize(context, result);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static xslt_tester.proxies.XSLT_Tester dS_XSLT_Tester_New(IContext context)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			IMendixObject result = (IMendixObject)Core.execute(context, "XSLT_Tester.DS_XSLT_Tester_New", params);
+			return result == null ? null : xslt_tester.proxies.XSLT_Tester.initialize(context, result);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void xPath_Evaluate(IContext context, xslt_tester.proxies.XPath_Tester _xPath_Tester)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("XPath_Tester", _xPath_Tester == null ? null : _xPath_Tester.getMendixObject());
+			Core.execute(context, "XSLT_Tester.XPath_Evaluate", params);
 		}
 		catch (CoreException e)
 		{
