@@ -27,7 +27,7 @@ public class XSLT extends CustomJavaAction<java.lang.String>
 		this.Stylesheet = Stylesheet;
 	}
 
-	@Override
+	@java.lang.Override
 	public java.lang.String executeAction() throws Exception
 	{
 		// BEGIN USER CODE
@@ -36,8 +36,6 @@ public class XSLT extends CustomJavaAction<java.lang.String>
         XsltExecutable exp = comp.compile(new StreamSource(new StringReader(Stylesheet)));
         XdmNode source = proc.newDocumentBuilder().build(new StreamSource(new StringReader(Source)));
         Serializer out = proc.newSerializer();
-        out.setOutputProperty(Serializer.Property.METHOD, "html");
-        out.setOutputProperty(Serializer.Property.INDENT, "yes");
         StringWriter writer = new StringWriter();
 		out.setOutputWriter(writer);
         XsltTransformer trans = exp.load();
@@ -52,7 +50,7 @@ public class XSLT extends CustomJavaAction<java.lang.String>
 	/**
 	 * Returns a string representation of this action
 	 */
-	@Override
+	@java.lang.Override
 	public java.lang.String toString()
 	{
 		return "XSLT";
