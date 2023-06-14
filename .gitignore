@@ -6,6 +6,6 @@
 /javasource/system/
 /**/node_modules/
 !/javascriptsource/**/node_modules/
-*.launch
-*.bak
-*.lock
+/*.launch
+/*.bak
+/*.lock
