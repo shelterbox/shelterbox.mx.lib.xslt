@@ -1,3 +1,11 @@
-deployment/
+/.mendix-cache/
+/.classpath
+/.project
+/deployment/
+/javasource/*/proxies/
+/javasource/system/
+/**/node_modules/
+!/javascriptsource/**/node_modules/
+*.launch
 *.bak
 *.lock
